@@ -21,7 +21,7 @@
       display:flex;align-items:center;justify-content:center;
       font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
       background: linear-gradient(135deg,var(--bg1),var(--bg2));
-      padding:40px;
+      padding:20px;
       overflow-x:hidden;
       position:relative;
     }
@@ -42,81 +42,96 @@
       100% {transform: translateY(1000px) rotate(360deg);}
     }
 
-    .card-wrap{width:100%;max-width:760px;display:grid;grid-template-columns:1fr;gap:28px;align-items:center;position:relative;z-index:1}
+    .card-wrap{
+      width:100%;
+      max-width:760px;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:20px;
+      align-items:center;
+      position:relative;
+      z-index:1
+    }
 
     .card{
       background: linear-gradient(135deg,var(--bgCard1),#fff0f5);
       border-radius:24px;
-      padding:30px;
-      box-shadow:0 20px 50px rgba(0,0,0,0.2);
+      padding:25px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.2);
       position:relative;
       overflow:hidden;
       transition: transform 0.3s ease, opacity 0.5s ease;
     }
-    .card:hover{transform: translateY(-10px);}
+    .card:hover{transform: translateY(-8px);}
 
     .card.decor{
       background: linear-gradient(135deg,var(--bgCard2),#ffdce6);
       display:none;
       color:#333;
-      padding:30px 40px;
+      padding:25px 30px;
       border-radius:24px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     }
 
     .card.decor div{
       background: linear-gradient(120deg, #ffdde1, #ffe6f0);
-      padding:20px;
+      padding:15px;
       border-radius:18px;
     }
 
-    .left{display:flex;flex-direction:column;gap:20px}
-    .logo{font-weight:800;letter-spacing:1px;color:var(--accent);font-size:26px}
-    .hero{display:flex;gap:20px;align-items:center}
+    .left{display:flex;flex-direction:column;gap:15px}
+    .logo{font-weight:800;letter-spacing:1px;color:var(--accent);font-size:24px}
+    .hero{display:flex;gap:15px;align-items:center;flex-wrap:wrap}
    .balloon {
-  width:140px;
-  height:140px;
-  flex:0 0 140px;
-  background:linear-gradient(180deg,#ffb6c1,#ff6b91);
-  border-radius:50%;
-  box-shadow:inset -8px -8px 20px rgba(255,255,255,0.4);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:800;
-  color:white;
-  font-size:40px;
-  overflow:hidden; /* img এর জন্য */
-}
+      width:120px;
+      height:120px;
+      flex:0 0 120px;
+      background:linear-gradient(180deg,#ffb6c1,#ff6b91);
+      border-radius:50%;
+      box-shadow:inset -6px -6px 16px rgba(255,255,255,0.4);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      color:white;
+      font-size:36px;
+      overflow:hidden;
+    }
 
-
-    h1{margin:0;font-size:30px;color:#d61a6a}
-    p.lead{margin:0;color:#555;font-size:17px;padding:8px 12px; border-radius:10px; background: linear-gradient(120deg,#ffdce6,#ffb6c1)}
-    .to-line{margin-top:10px;font-weight:600;color:#333;font-size:17px; background: linear-gradient(120deg,#ffcce0,#ffa1c1); padding:8px 12px; border-radius:10px}
+    h1{margin:0;font-size:28px;color:#d61a6a}
+    p.lead{margin:0;color:#555;font-size:16px;padding:6px 10px; border-radius:10px; background: linear-gradient(120deg,#ffdce6,#ffb6c1)}
+    .to-line{margin-top:8px;font-weight:600;color:#333;font-size:16px; background: linear-gradient(120deg,#ffcce0,#ffa1c1); padding:6px 10px; border-radius:10px}
     .to-line span{color:var(--accent)}
 
-    .message{padding:22px;border-radius:18px;background:linear-gradient(120deg,#ffe6f0,#ffdce6);border:1px dashed #ffb6c1;margin-top:14px;display:block;}
-    .message p{margin:0;color:#222;line-height:1.6;font-size:16px}
+    .message{padding:18px;border-radius:16px;background:linear-gradient(120deg,#ffe6f0,#ffdce6);border:1px dashed #ffb6c1;margin-top:12px;display:block;}
+    .message p{margin:0;color:#222;line-height:1.5;font-size:15px}
 
-    .note{font-size:15px;color:var(--muted);text-align:center;margin-top:12px}
+    .note{font-size:14px;color:var(--muted);text-align:center;margin-top:10px}
 
     .show-btn{
       display:block;
-      margin:20px auto;
-      padding:12px 28px;
-      font-size:16px;
+      margin:15px auto;
+      padding:10px 24px;
+      font-size:15px;
       background: var(--accent);
       color:#fff;
       border:none;
-      border-radius:14px;
+      border-radius:12px;
       cursor:pointer;
       transition: background 0.3s ease;
     }
     .show-btn:hover{background:#ff3b3b}
 
-    @media (max-width:720px){
-      .balloon{width:120px;height:120px;font-size:32px}
-      p.lead, .to-line{font-size:15px; padding:6px 10px}
+    @media (max-width:500px){
+      .balloon{width:100px;height:100px;font-size:28px}
+      p.lead, .to-line{font-size:14px; padding:5px 8px}
+      .message p{font-size:14px}
+      .show-btn{padding:8px 20px;font-size:14px}
+    }
+
+    @media (max-width:360px){
+      .hero{flex-direction:column;align-items:center}
+      .balloon{width:90px;height:90px;font-size:24px}
     }
   </style>
 </head>
@@ -144,10 +159,10 @@
       <div class="logo">🎁 শুভ জন্মদিন, বন্ধু! 💌</div>
       <div class="hero">
        <div class="balloon">
-  <img src="https://i.ibb.co/ZpXffJ4F/487993701-1008575661337498-1323984483893060621-n.jpg" 
+        <img src="https://i.ibb.co/ZpXffJ4F/487993701-1008575661337498-1323984483893060621-n.jpg" 
        alt="Birthday Image" 
        style="width:100%; height:100%;  border-radius:50%; object-fit:cover;">
-</div>
+       </div>
 
         <div>
           <p class="to-line">মামা! এই কার্ডটি তোর জন্য,</p>
@@ -171,7 +186,7 @@
     </div>
 
     <div class="card decor" id="card2" aria-hidden="true">
-      <div style="text-align:center;margin-top:12px;font-weight:600;line-height:1.6; background: linear-gradient(120deg,#ffe6f0,#ffdde1); padding:20px; border-radius:18px;">
+      <div style="text-align:center;margin-top:12px;font-weight:600;line-height:1.5; background: linear-gradient(120deg,#ffe6f0,#ffdde1); padding:15px; border-radius:18px;">
         🌸 শুভ জন্মদিন, সালাউদ্দিন! 🌸<br>
        আজকের দিনটা পুরোটাই তোর জন্য স্পেশাল রে মামা! কারণ আজই সেই দিন, যেদিন তুই এই দুনিয়ায় আসছিস আর চারপাশটা একদম রঙিন করে ফেলছিস! ✨
 এই জন্মদিনে তোর মুখে যেন সবসময় হাসি লেগে থাকে 😄,
